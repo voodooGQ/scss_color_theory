@@ -18,7 +18,17 @@ Color Functions
         $degree: $degree + 360;
     }
 
-    @return $degree
+    @return $degree;
+}
+
+@function percentage_limits($percentage) {
+    @if($percentage > 100) {
+        $percentage: 100; //$percentage - 100;
+    } @else if($percentage < 0) {
+        $percentage: 0; //$percentage + 100;
+    }
+
+    @return $percentage;
 }
 
 /*
@@ -40,15 +50,20 @@ Color Functions
  * @param {boolen} $counter Counter-Clockwise on the color wheel
  * @return {string}
  */
-@function analogous_color($color: $base_color, $counter: false) {
+@function analogous_color($color: $base_color, $swatch: 3) {
     $hue: hue($color);
     $saturation: saturation($color);
     $lightness: lightness($color);
+    $base_degree: 15;
 
-    @if($counter) {
-        $hue: $hue - 30;
-    } @else {
-        $hue: $hue + 30;
+    @if($swatch == 1) {
+        $hue: $hue - ($base_degree * 2);
+    } @else if ($swatch == 2) {
+        $hue: $hue - $base_degree;
+    } @else if ($swatch == 4) {
+        $hue: $hue + $base_degree;
+    } @else if ($swatch == 5) {
+        $hue: $hue + ($base_degree * 2);
     }
 
     @return hsl(color_wheel($hue), $saturation, $lightness);
@@ -62,16 +77,32 @@ Color Functions
  * @param {boolean} $counter Counter-Clockwise on the color wheel
  * @return {string}
  */
-@function triad_color($color: $base_color, $counter: false) {
+@function triad_color($color: $base_color, $swatch: 3, $brighten: false) {
     $hue: hue($color);
     $saturation: saturation($color);
     $lightness: lightness($color);
+    $base_degree: 120;
+    $light_diff: 10;
 
-    @if($counter) {
-        $hue: $hue - 120;
-    } @else {
-        $hue: $hue - 120;
+    @if($swatch == 1) {
+        $hue: $hue - $base_degree;
+        @if($brighten == false) {
+            $lightness: $lightness - $light_diff;
+        } @else {
+            $lightness: $lightness + $light_diff;
+        }
+    } @else if ($swatch == 2) {
+        $hue: $hue - $base_degree;
+    } @else if ($swatch == 4) {
+        $hue: $hue + $base_degree;
+    } @else if ($swatch == 5) {
+        $hue: $hue + $base_degree;
+        @if($brighten == false) {
+            $lightness: $lightness - $light_diff;
+        } @else {
+            $lightness: $lightness + $light_diff;
+        }
     }
 
-    @return hsl(color_wheel($hue), $saturation, $lightness);
+    @return hsl(color_wheel($hue), percentage_limits($saturation), percentage_limits($lightness));
 }

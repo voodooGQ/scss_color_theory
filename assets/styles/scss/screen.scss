@@ -28,13 +28,14 @@ body {
 }
 
 .palette {
-    width: ($site_width / 3);
-    margin: $base_padding auto;
+    width: $site_width;
+    margin: ($base_padding * 3) auto;
 }
 
 .swatch {
     height: 75px;
-    width: 100%;
+    display: inline-block;
+    width: 18%;
     margin: $base_padding 0;
     border: 1px solid black;
     text-align: center;

@@ -4,14 +4,16 @@ Original Author: Shane Smith
 Site Variables
 ------------------------------------------------------------------------ */
 
-$base_color: #B20000;
+$base_color: #266D7F;
+$brighten: false;
+
 
 /*
  * Palette Style
  *
  * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
  */
-$palette_style: 'analogous';
+$palette_style: 'triad';
 
 $site_width: 1024px;
 $base_padding: 10px;
