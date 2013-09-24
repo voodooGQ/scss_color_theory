@@ -15,20 +15,70 @@ Original Author: Shane Smith
 
 Site Variables
 ------------------------------------------------------------------------ */
+/*
+ * Palette Style
+ *
+ * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
+ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Color Functions
+------------------------------------------------------------------------ */
+/*
+ * Updates a supplied number based on a 360 degree color wheel
+ *
+ * @param {int} $degree
+ * @return {int}
+ */
+/*
+ * Complimentary color function. 
+ * Returns the complimentary color of supplied color
+ *
+ * @param {string} $color The base color
+ * @return {string}
+ */
+/*
+ * Analogous Color function.
+ * Returns the analagous color shifts based on the supplied color
+ *
+ * @param {string} $color The base color
+ * @param {boolen} $counter Counter-Clockwise on the color wheel
+ * @return {string}
+ */
+/*
+ * Traid Color function
+ * Returns the triad color shifts based on the supplied color
+ *
+ * @param {stirng} $color The base color
+ * @param {boolean} $counter Counter-Clockwise on the color wheel
+ * @return {string}
+ */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
 
 Color Palette
 ------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Site Variables
+------------------------------------------------------------------------ */
+/*
+ * Palette Style
+ *
+ * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
+ */
 body {
-  background-color: #7bcd5e; }
+  background-color: #34398b; }
 
 .wrapper {
-  background-color: #b05ecd;
+  background-color: #398b34;
   width: 1024px;
   margin: 0 auto; }
 
 .header {
+  background-color: #5b348b;
   padding: 10px; }
 
 .content {

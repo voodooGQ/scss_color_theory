@@ -1,0 +1,34 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Color Palette
+------------------------------------------------------------------------ */
+
+@import 'variables';
+
+// Declare color variables. Default to base color
+$secondary_color: $base_color;
+$tertiary_color: $base_color;
+$quaternary_color: $base_color;
+
+
+@if $palette_style == "complimentary" {
+
+    $secondary_color: complimentary_color($base_color);
+    $tertiary_color: $base_color;
+    $quaternary_color: complimentary_color($base_color);
+
+} @else if $palette_style == "analogous" {
+
+    $secondary_color: analogous_color($base_color, true);
+    $tertiary_color: analogous_color($base_color, false);
+    $quaternary_color: $base_color;
+
+} @else if $palette_style == 'triad' {
+
+    $secondary_color: triad_color($base_color, true);
+    $tertiary_color: analogous_color($base_color, false);
+    $quaternary_color: $base_color;
+
+}
+

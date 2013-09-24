@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Color Functions
+------------------------------------------------------------------------ */
+
+
+/*
+ * Updates a supplied number based on a 360 degree color wheel
+ *
+ * @param {int} $degree
+ * @return {int}
+ */
+@function color_wheel($degree) {
+    @if($degree >= 360) {
+        $degree: $degree - 360;
+    } @else if($degree <= 0) {
+        $degree: $degree + 360;
+    }
+
+    @return $degree
+}
+
+/*
+ * Complimentary color function. 
+ * Returns the complimentary color of supplied color
+ *
+ * @param {string} $color The base color
+ * @return {string}
+ */
+@function complimentary_color($color: $base_color) {
+    @return complement($color);
+}
+
+/*
+ * Analogous Color function.
+ * Returns the analagous color shifts based on the supplied color
+ *
+ * @param {string} $color The base color
+ * @param {boolen} $counter Counter-Clockwise on the color wheel
+ * @return {string}
+ */
+@function analogous_color($color: $base_color, $counter: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+
+    @if($counter) {
+        $hue: $hue - 30;
+    } @else {
+        $hue: $hue + 30;
+    }
+
+    @return hsl(color_wheel($hue), $saturation, $lightness);
+}
+
+/*
+ * Traid Color function
+ * Returns the triad color shifts based on the supplied color
+ *
+ * @param {stirng} $color The base color
+ * @param {boolean} $counter Counter-Clockwise on the color wheel
+ * @return {string}
+ */
+@function triad_color($color: $base_color, $counter: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+
+    @if($counter) {
+        $hue: $hue - 120;
+    } @else {
+        $hue: $hue - 120;
+    }
+
+    @return hsl(color_wheel($hue), $saturation, $lightness);
+}
