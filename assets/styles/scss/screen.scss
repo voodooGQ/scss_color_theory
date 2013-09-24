@@ -1,0 +1,27 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: All Sizes
+------------------------------------------------------------------------ */
+
+@import 'global_imports';
+
+body {
+    background-color: $base_color;
+}
+
+.wrapper {
+    background-color: $secondary_color;
+    width: $site_width;
+    margin: 0 auto;
+}
+
+.header {
+    padding: $base_padding;
+}
+
+.content {
+    padding: $base_padding;
+}
