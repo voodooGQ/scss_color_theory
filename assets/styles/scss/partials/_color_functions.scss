@@ -21,11 +21,26 @@ Color Functions
     @return $degree;
 }
 
-@function percentage_limits($percentage) {
-    @if($percentage > 100) {
-        $percentage: 100; //$percentage - 100;
-    } @else if($percentage < 0) {
-        $percentage: 0; //$percentage + 100;
+/*
+ * Limits a supplied number to a min of 0 and max of 100 unless loop is true. If loop is true remove/add 100 if over/under 0/100
+ *
+ * @param {int} $percentage
+ * @param {booean} $loop
+ * @return {int}
+ */
+@function percentage_limits($percentage, $loop: false) {
+    @if($percentage > 100%) {
+        @if($loop == false) {
+            $percentage: 100; 
+        } @else {
+            $percentage: $percentage - 100;
+        }
+    } @else if($percentage < 0%) {
+        @if($loop == false) {
+            $percentage: 0; 
+        } @else {
+            $percentage: $percentage + 100;
+        }
     }
 
     @return $percentage;
@@ -47,7 +62,7 @@ Color Functions
  * Returns the analagous color shifts based on the supplied color
  *
  * @param {string} $color The base color
- * @param {boolen} $counter Counter-Clockwise on the color wheel
+ * @param {int} $swatch The swatch color modifier (default 3)
  * @return {string}
  */
 @function analogous_color($color: $base_color, $swatch: 3) {
@@ -73,9 +88,9 @@ Color Functions
  * Traid Color function
  * Returns the triad color shifts based on the supplied color
  *
- * @param {stirng} $color The base color
- * @param {boolean} $counter Counter-Clockwise on the color wheel
- * @return {string}
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
  */
 @function triad_color($color: $base_color, $swatch: 3, $brighten: false) {
     $hue: hue($color);
@@ -105,4 +120,32 @@ Color Functions
     }
 
     @return hsl(color_wheel($hue), percentage_limits($saturation), percentage_limits($lightness));
+}
+
+/*
+ * Shade Color function
+ * Returns various shades of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+@function shade_color($color: $base_color, $swatch: 3, $brighten: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $shade_modifier: 18;
+
+    @if($swatch != 3) {
+        @if($brighten == false) {
+            $saturation: $saturation - ($shade_modifier * $swatch);
+            $lightness: $lightness - (($shade_modifier / 1.25) * $swatch);
+        } @else {
+            $saturation: $saturation + ($shade_modifier * $swatch);
+            $lightness: $lightness + (($shade_modifier * 1.25) * $swatch);
+        }
+    }
+
+    @return hsl($hue, percentage_limits($saturation, true), percentage_limits($lightness, true));
 }

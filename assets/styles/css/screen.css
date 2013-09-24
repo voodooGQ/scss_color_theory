@@ -18,7 +18,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
+ * Options: complimentary, analogous, triad, split-complimentary, tetradic, square, shades
  */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
@@ -29,6 +29,13 @@ Color Functions
  * Updates a supplied number based on a 360 degree color wheel
  *
  * @param {int} $degree
+ * @return {int}
+ */
+/*
+ * Limits a supplied number to a min of 0 and max of 100 unless loop is true. If loop is true remove/add 100 if over/under 0/100
+ *
+ * @param {int} $percentage
+ * @param {booean} $loop
  * @return {int}
  */
 /*
@@ -43,15 +50,24 @@ Color Functions
  * Returns the analagous color shifts based on the supplied color
  *
  * @param {string} $color The base color
- * @param {boolen} $counter Counter-Clockwise on the color wheel
+ * @param {int} $swatch The swatch color modifier (default 3)
  * @return {string}
  */
 /*
  * Traid Color function
  * Returns the triad color shifts based on the supplied color
  *
- * @param {stirng} $color The base color
- * @param {boolean} $counter Counter-Clockwise on the color wheel
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ */
+/*
+ * Shade Color function
+ * Returns various shades of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
  * @return {string}
  */
 /* ---------------------------------------------------------------------
@@ -67,18 +83,18 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
+ * Options: complimentary, analogous, triad, split-complimentary, tetradic, square, shades
  */
 body {
-  background-color: #266d7f; }
+  background-color: #79a22f; }
 
 .wrapper {
-  background-color: #6d7f26;
+  background-color: #e5fcbb;
   width: 1024px;
   margin: 0 auto; }
 
 .header {
-  background-color: #7f266d;
+  background-color: #55643a;
   padding: 10px; }
 
 .content {
@@ -98,16 +114,16 @@ body {
   padding-top: 50px; }
 
 .swatch-1 {
-  background-color: #4b581a; }
+  background-color: #b5e65e; }
 
 .swatch-2 {
-  background-color: #6d7f26; }
+  background-color: #e5fcbb; }
 
 .swatch-3 {
-  background-color: #266d7f; }
+  background-color: #79a22f; }
 
 .swatch-4 {
-  background-color: #7f266d; }
+  background-color: #55643a; }
 
 .swatch-5 {
-  background-color: #581a4b; }
+  background-color: #98be53; }
