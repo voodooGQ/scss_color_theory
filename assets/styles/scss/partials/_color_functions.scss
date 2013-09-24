@@ -47,6 +47,28 @@ Color Functions
 }
 
 /*
+ * Adjusts the lightness of the font color based on the background color and a supplied tint
+ * This will prevent dark on dark/ light on light font/background images
+ *
+ * @param {string} $background-color This must match the background color
+ * @param {string} $tint The color which you would like to tint the font
+ * @param {int} $adjustment_percentage By what degree would you like the tint color to show
+ * @return {string}
+ */
+@function font_color_adjust($background-color, $tint, $adjustment_percentage) {
+    $bg_lightness: lightness($background-color);
+    $tint_lightness: lightness($tint);
+
+    @if($bg_lightness >= 50) {
+        $tint_lightness: $adjustment_percentage;
+    } @else {
+        $tint_lightness: (100 - $adjustment_percentage);
+    }
+
+    @return hsl(hue($tint), saturation($tint), $tint_lightness);
+}
+
+/*
  * Complimentary color function. 
  * Returns the complimentary color of supplied color
  *

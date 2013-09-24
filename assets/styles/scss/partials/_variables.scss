@@ -4,14 +4,15 @@ Original Author: Shane Smith
 Site Variables
 ------------------------------------------------------------------------ */
 
-$base_color: #79a22f;
+$base_color: #BE0000;
 $brighten: true;
 
+$tint_adjustment_percentage: 15;
 
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, split-complimentary, tetradic, square, shades
+ * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 $palette_style: 'shades';
 

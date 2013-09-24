@@ -18,7 +18,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, split-complimentary, tetradic, square, shades
+ * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
@@ -37,6 +37,15 @@ Color Functions
  * @param {int} $percentage
  * @param {booean} $loop
  * @return {int}
+ */
+/*
+ * Adjusts the lightness of the font color based on the background color and a supplied tint
+ * This will prevent dark on dark/ light on light font/background images
+ *
+ * @param {string} $background-color This must match the background color
+ * @param {string} $tint The color which you would like to tint the font
+ * @param {int} $adjustment_percentage By what degree would you like the tint color to show
+ * @return {string}
  */
 /*
  * Complimentary color function. 
@@ -83,18 +92,20 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, split-complimentary, tetradic, square, shades
+ * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 body {
-  background-color: #79a22f; }
+  background-color: #be0000; }
 
 .wrapper {
-  background-color: #e5fcbb;
+  background-color: #e2c1c1;
+  color: #4d0000;
   width: 1024px;
   margin: 0 auto; }
 
 .header {
-  background-color: #55643a;
+  background-color: #781313;
+  color: #f4bdbd;
   padding: 10px; }
 
 .content {
@@ -114,16 +125,21 @@ body {
   padding-top: 50px; }
 
 .swatch-1 {
-  background-color: #b5e65e; }
+  background-color: #ab8686;
+  color: #4d0000; }
 
 .swatch-2 {
-  background-color: #e5fcbb; }
+  background-color: #e2c1c1;
+  color: #4d0000; }
 
 .swatch-3 {
-  background-color: #79a22f; }
+  background-color: #be0000;
+  color: #ffb3b3; }
 
 .swatch-4 {
-  background-color: #55643a; }
+  background-color: #781313;
+  color: #ffb3b3; }
 
 .swatch-5 {
-  background-color: #98be53; }
+  background-color: #f10d0d;
+  color: #ffb3b3; }
