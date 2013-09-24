@@ -7,28 +7,33 @@ Color Palette
 @import 'variables';
 
 // Declare color variables. Default to base color
-$secondary_color: $base_color;
-$tertiary_color: $base_color;
-$quaternary_color: $base_color;
+$swatch-1: $base_color;
+$swatch-2: $base_color;
+$swatch-3: $base_color;
+$swatch-4: $base_color;
+$swatch-5: $base_color;
 
 
 @if $palette_style == "complimentary" {
 
-    $secondary_color: complimentary_color($base_color);
-    $tertiary_color: $base_color;
-    $quaternary_color: complimentary_color($base_color);
+    $swatch-1: complimentary_color($base_color);
+    $swatch-2: complimentary_color($base_color);
+    $swatch-4: complimentary_color($base_color);
+    $swatch-5: complimentary_color($base_color);
 
 } @else if $palette_style == "analogous" {
 
-    $secondary_color: analogous_color($base_color, true);
-    $tertiary_color: analogous_color($base_color, false);
-    $quaternary_color: $base_color;
+    $swatch-1: analogous_color($base_color, true);
+    $swatch-2: analogous_color($base_color, false);
+    $swatch-3: analogous_color($base_color, true);
+    $swatch-4: analogous_color($base_color, false);
 
 } @else if $palette_style == 'triad' {
 
-    $secondary_color: triad_color($base_color, true);
-    $tertiary_color: analogous_color($base_color, false);
-    $quaternary_color: $base_color;
+    $swatch-1: triad_color($base_color, true);
+    $swatch-2: triad_color($base_color, false);
+    $swatch-4: triad_color($base_color, true);
+    $swatch-5: triad_color($base_color, false);
 
 }
 

@@ -70,16 +70,43 @@ Site Variables
  * Options: complimentary, analogous, triad, split-complimentary, tetradic, square
  */
 body {
-  background-color: #34398b; }
+  background-color: #b20059; }
 
 .wrapper {
-  background-color: #398b34;
+  background-color: #b25900;
   width: 1024px;
   margin: 0 auto; }
 
 .header {
-  background-color: #5b348b;
+  background-color: #b25900;
   padding: 10px; }
 
 .content {
   padding: 10px; }
+
+.palette {
+  width: 341.33333px;
+  margin: 10px auto; }
+
+.swatch {
+  height: 75px;
+  width: 100%;
+  margin: 10px 0;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 50px; }
+
+.swatch-1 {
+  background-color: #b20059; }
+
+.swatch-2 {
+  background-color: #b25900; }
+
+.swatch-3 {
+  background-color: #b20059; }
+
+.swatch-4 {
+  background-color: #b25900; }
+
+.swatch-5 {
+  background-color: #b20000; }

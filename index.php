@@ -50,5 +50,12 @@
             </code></pre>
         </div>
     </div>
+    <div class="palette">
+        <div class="swatch swatch-1">Swatch 1</div>
+        <div class="swatch swatch-2">Swatch 2</div>
+        <div class="swatch swatch-3">Swatch 3</div>
+        <div class="swatch swatch-4">Swatch 4</div>
+        <div class="swatch swatch-5">Swatch 5</div>
+    </div>
 </body>
 </html>
