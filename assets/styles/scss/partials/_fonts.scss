@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Web Fonts
+------------------------------------------------------------------------ */
+
+@import url(http://fonts.googleapis.com/css?family=Carme);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+
+$font_fallbacks:  Helvetica, Verdana, arials, sans-serif;
+$font_mono_fallbacks: sans-serif;
+$font_pathway_gothic: "Carme", $font_fallbacks;
+$font_droid_sans_mono: "Droid Sans Mono" $font_mono_fallbacks;

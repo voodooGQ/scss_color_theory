@@ -10,6 +10,9 @@ Width: All Sizes
 
 body {
     background-color: $swatch-3;
+    font-family: $font_pathway_gothic;
+    font-size: $base_font_size;
+    line-height: $base_line_height;
 }
 
 .wrapper {
@@ -17,6 +20,19 @@ body {
     color: font_color_adjust($swatch-2, $swatch-3, $tint_adjustment_percentage);
     width: $site_width;
     margin: 0 auto;
+    font-size: 1.25em;
+
+    a {
+        text-decoration: none;
+        color: font_color_adjust($swatch-2, $swatch-4, ($tint_adjustment_percentage * 2));
+        &:hover {
+            color: font_color_adjust($swatch-2, $swatch-4, ($tint_adjustment_percentage * 4));
+        }
+    }
+
+    code {
+        font-family: $font_droid_sans_mono;
+    }
 }
 
 .header {

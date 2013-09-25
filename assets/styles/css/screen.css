@@ -1,3 +1,5 @@
+@import url(http://fonts.googleapis.com/css?family=Carme);
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
 
@@ -9,6 +11,11 @@ Width: All Sizes
 Original Author: Shane Smith
 
 Global Includes
+------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Web Fonts
 ------------------------------------------------------------------------ */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
@@ -95,17 +102,28 @@ Site Variables
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 body {
-  background-color: #be0000; }
+  background-color: #e5b1a1;
+  font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
+  font-size: 67.5%;
+  line-height: 168.75%; }
 
 .wrapper {
-  background-color: #e2c1c1;
-  color: #4d0000;
+  background-color: #691c04;
+  color: #eecdc3;
   width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  font-size: 1.25em; }
+  .wrapper a {
+    text-decoration: none;
+    color: #c8a79d; }
+    .wrapper a:hover {
+      color: #835749; }
+  .wrapper code {
+    font-family: "Droid Sans Mono" sans-serif; }
 
 .header {
-  background-color: #781313;
-  color: #f4bdbd;
+  background-color: #c29d91;
+  color: #31201b;
   padding: 10px; }
 
 .content {
@@ -125,21 +143,21 @@ body {
   padding-top: 50px; }
 
 .swatch-1 {
-  background-color: #ab8686;
-  color: #4d0000; }
+  background-color: #fefbfa;
+  color: #3c1b11; }
 
 .swatch-2 {
-  background-color: #e2c1c1;
-  color: #4d0000; }
+  background-color: #691c04;
+  color: #eecdc3; }
 
 .swatch-3 {
-  background-color: #be0000;
-  color: #ffb3b3; }
+  background-color: #e5b1a1;
+  color: #3c1b11; }
 
 .swatch-4 {
-  background-color: #781313;
-  color: #ffb3b3; }
+  background-color: #c29d91;
+  color: #3c1b11; }
 
 .swatch-5 {
-  background-color: #f10d0d;
-  color: #ffb3b3; }
+  background-color: #f0dcd6;
+  color: #3c1b11; }
