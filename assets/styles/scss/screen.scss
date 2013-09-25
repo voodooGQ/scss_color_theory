@@ -15,9 +15,44 @@ body {
     line-height: $base_line_height;
 }
 
+.hdg_1 {
+    font-size: 2.5em;
+    line-height: 2.5em;
+}
+
+.hdg_2 {
+    font-size: 2.25em;
+    line-height: 2.25em;
+}
+
+.hdg_3 {
+    font-size: 2.0em;
+    line-height: 2.0em;
+}
+
+.hdg_4 {
+    font-size: 1.75em;
+    line-height: 1.75em;
+}
+
+.hdg_5 {
+    font-size: 1.5em;
+    font-size: 1.5em;
+}
+
+p, ul, ol {
+    padding-bottom: $base_padding;
+}
+
+ul, ol {
+    list-style: circle;
+    margin-left: ($base_padding * 2);
+}
+
 .wrapper {
     background-color: $swatch-2;
     color: font_color_adjust($swatch-2, $swatch-3, $tint_adjustment_percentage);
+    border: 2px solid $swatch-5;
     width: $site_width;
     margin: 0 auto;
     font-size: 1.25em;
@@ -37,8 +72,16 @@ body {
 
 .header {
     background-color: $swatch-4;
+    border-bottom: 2px solid $swatch-5;
     color: font_color_adjust($swatch-4, $swatch-4, $tint_adjustment_percentage);
     padding: $base_padding;
+}
+
+.footer {
+    height: 75px;
+    background: $swatch-1;
+    padding-top: 55px;
+    color: font_color_adjust($swatch-1, $swatch-3, $tint_adjustment_percentage);
 }
 
 .content {
@@ -51,13 +94,14 @@ body {
 }
 
 .swatch {
-    height: 75px;
+    height: 100px;
     display: inline-block;
     width: 18%;
-    margin: $base_padding 0;
+    margin: ($base_padding * 0.80);
     border: 1px solid black;
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
+    font-size: 1.75em;
 }
 
 .swatch-1 {

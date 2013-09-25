@@ -15,6 +15,75 @@ Global Includes
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
 
+Target Browsers: All
+Media Type: Screen, Projection
+Width: All Sizes
+------------------------------------------------------------------------ */
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+:focus {
+  /* remember to define focus styles! */
+  outline: 0; }
+
+body {
+  background: #fff;
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0; }
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: ""; }
+
+blockquote, q {
+  quotes: "" ""; }
+
+a img {
+  border: 0; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+img {
+  width: 100%; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
 Web Fonts
 ------------------------------------------------------------------------ */
 /* ---------------------------------------------------------------------
@@ -102,29 +171,64 @@ Site Variables
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 body {
-  background-color: #e5b1a1;
+  background-color: #be0000;
   font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
-  font-size: 67.5%;
-  line-height: 168.75%; }
+  font-size: 62.5%;
+  line-height: 2em; }
+
+.hdg_1 {
+  font-size: 2.5em;
+  line-height: 2.5em; }
+
+.hdg_2 {
+  font-size: 2.25em;
+  line-height: 2.25em; }
+
+.hdg_3 {
+  font-size: 2.0em;
+  line-height: 2.0em; }
+
+.hdg_4 {
+  font-size: 1.75em;
+  line-height: 1.75em; }
+
+.hdg_5 {
+  font-size: 1.5em;
+  font-size: 1.5em; }
+
+p, ul, ol {
+  padding-bottom: 10px; }
+
+ul, ol {
+  list-style: circle;
+  margin-left: 20px; }
 
 .wrapper {
-  background-color: #691c04;
-  color: #eecdc3;
+  background-color: #e2c1c1;
+  color: #4d0000;
+  border: 2px solid #f10d0d;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em; }
   .wrapper a {
     text-decoration: none;
-    color: #c8a79d; }
+    color: #841515; }
     .wrapper a:hover {
-      color: #835749; }
+      color: #e25050; }
   .wrapper code {
     font-family: "Droid Sans Mono" sans-serif; }
 
 .header {
-  background-color: #c29d91;
-  color: #31201b;
+  background-color: #781313;
+  border-bottom: 2px solid #f10d0d;
+  color: #f4bdbd;
   padding: 10px; }
+
+.footer {
+  height: 75px;
+  background: #ab8686;
+  padding-top: 55px;
+  color: #4d0000; }
 
 .content {
   padding: 10px; }
@@ -134,30 +238,31 @@ body {
   margin: 30px auto; }
 
 .swatch {
-  height: 75px;
+  height: 100px;
   display: inline-block;
   width: 18%;
-  margin: 10px 0;
+  margin: 8px;
   border: 1px solid black;
   text-align: center;
-  padding-top: 50px; }
+  padding-top: 40px;
+  font-size: 1.75em; }
 
 .swatch-1 {
-  background-color: #fefbfa;
-  color: #3c1b11; }
+  background-color: #ab8686;
+  color: #4d0000; }
 
 .swatch-2 {
-  background-color: #691c04;
-  color: #eecdc3; }
+  background-color: #e2c1c1;
+  color: #4d0000; }
 
 .swatch-3 {
-  background-color: #e5b1a1;
-  color: #3c1b11; }
+  background-color: #be0000;
+  color: #ffb3b3; }
 
 .swatch-4 {
-  background-color: #c29d91;
-  color: #3c1b11; }
+  background-color: #781313;
+  color: #ffb3b3; }
 
 .swatch-5 {
-  background-color: #f0dcd6;
-  color: #3c1b11; }
+  background-color: #f10d0d;
+  color: #ffb3b3; }
