@@ -204,31 +204,31 @@ ul, ol {
   margin-left: 20px; }
 
 .wrapper {
-  background-color: #e2c1c1;
-  color: #4d0000;
-  border: 2px solid #f10d0d;
+  background-color: #510b0b;
+  color: #ffb3b3;
+  border: 2px solid #efd9d9;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em; }
   .wrapper a {
     text-decoration: none;
-    color: #841515; }
+    color: #da8b8b; }
     .wrapper a:hover {
-      color: #e25050; }
+      color: #9b3131; }
   .wrapper code {
     font-family: "Droid Sans Mono" sans-serif; }
 
 .header {
-  background-color: #781313;
-  border-bottom: 2px solid #f10d0d;
-  color: #f4bdbd;
+  background-color: #fefbfb;
+  border-bottom: 2px solid #efd9d9;
+  color: #3a1212;
   padding: 10px; }
 
 .footer {
   height: 75px;
-  background: #ab8686;
+  background: #850808;
   padding-top: 55px;
-  color: #4d0000; }
+  color: #ffb3b3; }
 
 .content {
   padding: 10px; }
@@ -248,21 +248,21 @@ ul, ol {
   font-size: 1.75em; }
 
 .swatch-1 {
-  background-color: #ab8686;
-  color: #4d0000; }
+  background-color: #850808;
+  color: #ffb3b3; }
 
 .swatch-2 {
-  background-color: #e2c1c1;
-  color: #4d0000; }
+  background-color: #510b0b;
+  color: #ffb3b3; }
 
 .swatch-3 {
   background-color: #be0000;
   color: #ffb3b3; }
 
 .swatch-4 {
-  background-color: #781313;
-  color: #ffb3b3; }
+  background-color: #fefbfb;
+  color: #4d0000; }
 
 .swatch-5 {
-  background-color: #f10d0d;
-  color: #ffb3b3; }
+  background-color: #efd9d9;
+  color: #4d0000; }

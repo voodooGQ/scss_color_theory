@@ -157,15 +157,15 @@ Color Functions
     $hue: hue($color);
     $saturation: saturation($color);
     $lightness: lightness($color);
-    $shade_modifier: 18;
+    $shade_modifier: 12;
 
     @if($swatch != 3) {
         @if($brighten == false) {
             $saturation: $saturation - ($shade_modifier * $swatch);
-            $lightness: $lightness - (($shade_modifier / 1.25) * $swatch);
+           $lightness: $lightness - (($shade_modifier / 1.25) * $swatch);
         } @else {
             $saturation: $saturation + ($shade_modifier * $swatch);
-            $lightness: $lightness + (($shade_modifier * 1.25) * $swatch);
+           $lightness: $lightness + (($shade_modifier * 1.25) * $swatch);
         }
     }
 
