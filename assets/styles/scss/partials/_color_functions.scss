@@ -70,13 +70,29 @@ Color Functions
 
 /*
  * Complimentary color function. 
- * Returns the complimentary color of supplied color
+ * Returns the complimentary color of supplied color along with varying base shades
  *
  * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
  * @return {string}
  */
-@function complimentary_color($color: $base_color) {
-    @return complement($color);
+@function complimentary_color($color: $base_color, $swatch:3) {
+    $hue: hue($color);
+    $lightness: lightness($color);
+    $base_degree: 15;
+
+    @if($swatch == 1) {
+        $lightness: $lightness - $base_degree;
+    } @else if ($swatch == 2) {
+        $lightness: $lightness + $base_degree;
+    } @else if ($swatch == 4) {
+        $hue: $hue - 180;
+    } @else if ($swatch == 5) {
+        $hue: $hue - 180;
+        $lightness: $lightness - $base_degree;
+    }
+
+    @return hsl(color_wheel($hue), saturation($base_color), percentage_limits($lightness));
 }
 
 /*
@@ -162,10 +178,10 @@ Color Functions
     @if($swatch != 3) {
         @if($brighten == false) {
             $saturation: $saturation - ($shade_modifier * $swatch);
-           $lightness: $lightness - (($shade_modifier / 1.25) * $swatch);
+           $lightness: $lightness - ($shade_modifier  * $swatch);
         } @else {
             $saturation: $saturation + ($shade_modifier * $swatch);
-           $lightness: $lightness + (($shade_modifier * 1.25) * $swatch);
+           $lightness: $lightness + ($shade_modifier * $swatch);
         }
     }
 

@@ -125,9 +125,10 @@ Color Functions
  */
 /*
  * Complimentary color function. 
- * Returns the complimentary color of supplied color
+ * Returns the complimentary color of supplied color along with varying base shades
  *
  * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
  * @return {string}
  */
 /*
@@ -171,7 +172,7 @@ Site Variables
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
 body {
-  background-color: #be0000;
+  background-color: #403423;
   font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
   font-size: 62.5%;
   line-height: 2em; }
@@ -204,31 +205,31 @@ ul, ol {
   margin-left: 20px; }
 
 .wrapper {
-  background-color: #510b0b;
-  color: #ffb3b3;
-  border: 2px solid #efd9d9;
+  background-color: #715c3e;
+  color: #e4dbce;
+  border: 2px solid #080b0f;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em; }
   .wrapper a {
     text-decoration: none;
-    color: #da8b8b; }
+    color: #9cafc9; }
     .wrapper a:hover {
-      color: #9b3131; }
+      color: #486184; }
   .wrapper code {
     font-family: "Droid Sans Mono" sans-serif; }
 
 .header {
-  background-color: #fefbfb;
-  border-bottom: 2px solid #efd9d9;
-  color: #3a1212;
+  background-color: #232f40;
+  border-bottom: 2px solid #080b0f;
+  color: #ced7e4;
   padding: 10px; }
 
 .footer {
   height: 75px;
-  background: #850808;
+  background: #0f0c08;
   padding-top: 55px;
-  color: #ffb3b3; }
+  color: #e4dbce; }
 
 .content {
   padding: 10px; }
@@ -248,21 +249,21 @@ ul, ol {
   font-size: 1.75em; }
 
 .swatch-1 {
-  background-color: #850808;
-  color: #ffb3b3; }
+  background-color: #0f0c08;
+  color: #e4dbce; }
 
 .swatch-2 {
-  background-color: #510b0b;
-  color: #ffb3b3; }
+  background-color: #715c3e;
+  color: #e4dbce; }
 
 .swatch-3 {
-  background-color: #be0000;
-  color: #ffb3b3; }
+  background-color: #403423;
+  color: #e4dbce; }
 
 .swatch-4 {
-  background-color: #fefbfb;
-  color: #4d0000; }
+  background-color: #232f40;
+  color: #e4dbce; }
 
 .swatch-5 {
-  background-color: #efd9d9;
-  color: #4d0000; }
+  background-color: #080b0f;
+  color: #e4dbce; }

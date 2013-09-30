@@ -16,10 +16,10 @@ $swatch-5: $base_color;
 
 @if $palette_style == "complimentary" {
 
-    $swatch-1: complimentary_color($base_color);
-    $swatch-2: complimentary_color($base_color);
-    $swatch-4: complimentary_color($base_color);
-    $swatch-5: complimentary_color($base_color);
+    $swatch-1: complimentary_color($base_color, 1);
+    $swatch-2: complimentary_color($base_color, 2);
+    $swatch-4: complimentary_color($base_color, 4);
+    $swatch-5: complimentary_color($base_color, 5);
 
 } @else if $palette_style == "analogous" {
 
