@@ -37,49 +37,61 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   outline: 0;
   padding: 0;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 :focus {
   /* remember to define focus styles! */
-  outline: 0; }
+  outline: 0;
+}
 
 body {
   background: #fff;
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 table {
   /* tables still need 'cellspacing="0"' in the markup */
   border-collapse: separate;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 caption, th, td {
   font-weight: normal;
-  text-align: left; }
+  text-align: left;
+}
 
 blockquote:before, blockquote:after,
 q:before, q:after {
-  content: ""; }
+  content: "";
+}
 
 blockquote, q {
-  quotes: "" ""; }
+  quotes: "" "";
+}
 
 a img {
-  border: 0; }
+  border: 0;
+}
 
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block; }
+  display: block;
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
@@ -95,6 +107,14 @@ Site Variables
  * Palette Style
  *
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
+ */
+/**
+ * Grid System Variables
+ *
+ * To calculate
+ */
+/**
+ * Other Site Variables
  */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
@@ -171,72 +191,169 @@ Site Variables
  *
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
+/**
+ * Grid System Variables
+ *
+ * To calculate
+ */
+/**
+ * Other Site Variables
+ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Grid system calculator. Will define in px or % based on if responsive is chosen
+------------------------------------------------------------------------ */
+.grid:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.grid-col {
+  position: relative;
+  float: left;
+}
+
+.grid-col + .grid-col {
+  margin-left: 2.92969%;
+}
+
+.grid-col_1of12 {
+  width: 5.64779%;
+}
+
+.grid-col_2of12 {
+  width: 14.22526%;
+}
+
+.grid-col_3of12 {
+  width: 22.80273%;
+}
+
+.grid-col_4of12 {
+  width: 31.38021%;
+}
+
+.grid-col_5of12 {
+  width: 39.95768%;
+}
+
+.grid-col_6of12 {
+  width: 48.53516%;
+}
+
+.grid-col_7of12 {
+  width: 57.11263%;
+}
+
+.grid-col_8of12 {
+  width: 65.6901%;
+}
+
+.grid-col_9of12 {
+  width: 74.26758%;
+}
+
+.grid-col_10of12 {
+  width: 82.84505%;
+}
+
+.grid-col_11of12 {
+  width: 91.42253%;
+}
+
+.grid-col_12of12 {
+  width: 100%;
+}
+
+/**
+ * Grid Wrapper mixin to set max-width and regular width
+ */
 body {
-  background-color: #403423;
+  background-color: #cdefab;
   font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
   font-size: 62.5%;
-  line-height: 2em; }
+  line-height: 2em;
+}
 
 .hdg_1 {
   font-size: 2.5em;
-  line-height: 2.5em; }
+  line-height: 2.5em;
+}
 
 .hdg_2 {
   font-size: 2.25em;
-  line-height: 2.25em; }
+  line-height: 2.25em;
+}
 
 .hdg_3 {
   font-size: 2.0em;
-  line-height: 2.0em; }
+  line-height: 2.0em;
+}
 
 .hdg_4 {
   font-size: 1.75em;
-  line-height: 1.75em; }
+  line-height: 1.75em;
+}
 
 .hdg_5 {
   font-size: 1.5em;
-  font-size: 1.5em; }
+  font-size: 1.5em;
+}
 
 p, ul, ol {
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+}
 
 ul, ol {
   list-style: circle;
-  margin-left: 20px; }
+  margin-left: 20px;
+}
 
 .wrapper {
-  background-color: #715c3e;
-  color: #e4dbce;
-  border: 2px solid #080b0f;
+  background-color: #efabcd;
+  color: #26400c;
+  border: 2px solid #80b3e7;
   width: 1024px;
   margin: 0 auto;
-  font-size: 1.25em; }
-  .wrapper a {
-    text-decoration: none;
-    color: #9cafc9; }
-    .wrapper a:hover {
-      color: #486184; }
-  .wrapper code {
-    font-family: "Droid Sans Mono" sans-serif; }
+  font-size: 1.25em;
+}
+.wrapper a {
+  text-decoration: none;
+  color: #184c81;
+}
+.wrapper a:hover {
+  color: #5499de;
+}
+.wrapper code {
+  font-family: "Droid Sans Mono" sans-serif;
+}
 
 .header {
-  background-color: #232f40;
-  border-bottom: 2px solid #080b0f;
-  color: #ced7e4;
-  padding: 10px; }
+  background-color: #abcdef;
+  border-bottom: 2px solid #80b3e7;
+  color: #0c2640;
+  padding: 10px;
+}
 
 .footer {
   height: 75px;
-  background: #0f0c08;
+  background: #e780b3;
   padding-top: 55px;
-  color: #e4dbce; }
+  color: #26400c;
+}
 
 .content {
-  padding: 10px; }
+  padding: 10px;
+}
 
 .palette {
   width: 1024px;
-  margin: 30px auto; }
+  margin: 30px auto;
+}
 
 .swatch {
   height: 100px;
@@ -246,24 +363,46 @@ ul, ol {
   border: 1px solid black;
   text-align: center;
   padding-top: 40px;
-  font-size: 1.75em; }
+  font-size: 1.75em;
+}
 
 .swatch-1 {
-  background-color: #0f0c08;
-  color: #e4dbce; }
+  background-color: #e780b3;
+  color: #26400c;
+}
 
 .swatch-2 {
-  background-color: #715c3e;
-  color: #e4dbce; }
+  background-color: #efabcd;
+  color: #26400c;
+}
 
 .swatch-3 {
-  background-color: #403423;
-  color: #e4dbce; }
+  background-color: #cdefab;
+  color: #26400c;
+}
 
 .swatch-4 {
-  background-color: #232f40;
-  color: #e4dbce; }
+  background-color: #abcdef;
+  color: #26400c;
+}
 
 .swatch-5 {
-  background-color: #080b0f;
-  color: #e4dbce; }
+  background-color: #80b3e7;
+  color: #26400c;
+}
+
+.wrapper_grid {
+  max-width: 1024px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.grid {
+  margin-bottom: 10px;
+}
+
+.grid-col {
+  background-color: #e780b3;
+  color: #26400c;
+  height: 40px;
+}

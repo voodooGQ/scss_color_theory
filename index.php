@@ -21,7 +21,7 @@
         <div class="header">
             <h1 class="hdg_1">SCSS Test Site</h1>
         </div>
-        <div class="content">
+        <div class="content standard">
             <h1 class="hdg_1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</h1>
             <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
 
@@ -59,6 +59,40 @@
         <div class="swatch swatch-3">Swatch 3</div>
         <div class="swatch swatch-4">Swatch 4</div>
         <div class="swatch swatch-5">Swatch 5</div>
+    </div>
+    <div class="wrapper_grid">
+        <div class="grid">
+            <div class="grid-col grid-col_1of12">1 of 12</div>
+            <div class="grid-col grid-col_11of12">11 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_2of12">2 of 12</div>
+            <div class="grid-col grid-col_10of12">10 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_3of12">3 of 12</div>
+            <div class="grid-col grid-col_9of12">9 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_4of12">4 of 12</div>
+            <div class="grid-col grid-col_8of12">8 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_5of12">5 of 12</div>
+            <div class="grid-col grid-col_7of12">7 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_6of12">6 of 12</div>
+            <div class="grid-col grid-col_6of12">6 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_4of12">4 of 12</div>
+            <div class="grid-col grid-col_4of12">4 of 12</div>
+            <div class="grid-col grid-col_4of12">4 of 12</div>
+        </div>
+        <div class="grid">
+            <div class="grid-col grid-col_12of12">12 of 12</div>
+        </div>
     </div>
 </body>
 </html>

@@ -6,7 +6,7 @@ Site Variables
 
 $base_color: #403423;
 // $base_color: #BE0000;
-// $base_color: #CDEFAB;
+$base_color: #CDEFAB;
 // $base_color: #CCCCCC;
 // $base_color: #000000;
 // $base_color: #FFFFFF;
@@ -21,10 +21,23 @@ $tint_adjustment_percentage: 15;
  *
  * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
  */
-$palette_style: 'complimentary';
+$palette_style: 'triad';
 
-$site_width: 1024px;
+/**
+ * Grid System Variables
+ *
+ * To calculate
+ */
+$grid: true;
+$responsive: true;
+$site_width: 1024;
+$columns: 12;
+$gutter: 30;
+
+/**
+ * Other Site Variables
+ */
 $base_padding: 10px;
-
 $base_font_size: 62.5%;
 $base_line_height: 2em;
+

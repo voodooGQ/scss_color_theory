@@ -1,0 +1,56 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Grid system calculator. Will define in px or % based on if responsive is chosen
+------------------------------------------------------------------------ */
+
+$grid_width: 0;
+@if($grid == true) {
+
+    $column_width: (($site_width - ($gutter * ($columns - 1))) / $columns);
+    $grid_width: ($column_width * $columns + $gutter * ($columns - 1));
+
+    .grid:after {
+        content: ".";
+        display: block;
+        height: 0;
+        clear: both;
+        visibility: hidden;
+    }
+
+    .grid-col {
+        position: relative;
+        float: left;
+    }
+
+    .grid-col + .grid-col {
+        @if($responsive == true) {
+            margin-left: ((($gutter / $grid_width) * 100) * 1%);
+        } @else {
+            margin-left: #{$gutter}px;
+        }
+    }
+
+    $col: 1;
+    $units: 0;
+    @for $col from 1 to ($columns + 1) {
+        .grid-col_#{$col}of#{$columns} {
+            @if($responsive == true) {
+                $units: ($column_width * $col + $gutter * ($col - 1));
+                $units: ((($units / $grid_width) * 100) * 1%);
+            } @else {
+                $units: #{($column_width * $col)}px;
+            }
+            width: $units;
+        }
+    }
+
+}
+
+/**
+ * Grid Wrapper mixin to set max-width and regular width
+ */
+@mixin grid_wrapper() {
+    max-width: #{$grid_width}px;
+    width: 100%;
+}
