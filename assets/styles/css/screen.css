@@ -106,12 +106,10 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
+ * Options: complimentary, analogous, triad, shades, split-complimentary {TODO: tetradic, square}
  */
 /**
  * Grid System Variables
- *
- * To calculate
  */
 /**
  * Other Site Variables
@@ -176,6 +174,15 @@ Color Functions
  * @param {boolean} $brighten Whether we should brighten the color palette
  * @return {string}
  */
+/*
+ * Split-Complimentary Color function
+ * Returns Split-Complimentary palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
 
@@ -189,12 +196,10 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades {TODO: split-complimentary, tetradic, square}
+ * Options: complimentary, analogous, triad, shades, split-complimentary {TODO: tetradic, square}
  */
 /**
  * Grid System Variables
- *
- * To calculate
  */
 /**
  * Other Site Variables
@@ -218,51 +223,51 @@ Grid system calculator. Will define in px or % based on if responsive is chosen
 }
 
 .grid-col + .grid-col {
-  margin-left: 2.92969%;
+  margin-left: 0.97656%;
 }
 
 .grid-col_1of12 {
-  width: 5.64779%;
+  width: 7.43815%;
 }
 
 .grid-col_2of12 {
-  width: 14.22526%;
+  width: 15.85286%;
 }
 
 .grid-col_3of12 {
-  width: 22.80273%;
+  width: 24.26758%;
 }
 
 .grid-col_4of12 {
-  width: 31.38021%;
+  width: 32.68229%;
 }
 
 .grid-col_5of12 {
-  width: 39.95768%;
+  width: 41.09701%;
 }
 
 .grid-col_6of12 {
-  width: 48.53516%;
+  width: 49.51172%;
 }
 
 .grid-col_7of12 {
-  width: 57.11263%;
+  width: 57.92643%;
 }
 
 .grid-col_8of12 {
-  width: 65.6901%;
+  width: 66.34115%;
 }
 
 .grid-col_9of12 {
-  width: 74.26758%;
+  width: 74.75586%;
 }
 
 .grid-col_10of12 {
-  width: 82.84505%;
+  width: 83.17057%;
 }
 
 .grid-col_11of12 {
-  width: 91.42253%;
+  width: 91.58529%;
 }
 
 .grid-col_12of12 {
@@ -273,7 +278,7 @@ Grid system calculator. Will define in px or % based on if responsive is chosen
  * Grid Wrapper mixin to set max-width and regular width
  */
 body {
-  background-color: #cdefab;
+  background-color: #403423;
   font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
   font-size: 62.5%;
   line-height: 2em;
@@ -314,36 +319,36 @@ ul, ol {
 }
 
 .wrapper {
-  background-color: #efabcd;
-  color: #26400c;
-  border: 2px solid #80b3e7;
+  background-color: #152426;
+  color: #e4dbce;
+  border: 2px solid #262340;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em;
 }
 .wrapper a {
   text-decoration: none;
-  color: #184c81;
+  color: #a09cc9;
 }
 .wrapper a:hover {
-  color: #5499de;
+  color: #4d4884;
 }
 .wrapper code {
   font-family: "Droid Sans Mono" sans-serif;
 }
 
 .header {
-  background-color: #abcdef;
-  border-bottom: 2px solid #80b3e7;
-  color: #0c2640;
+  background-color: #161526;
+  border-bottom: 2px solid #262340;
+  color: #cfcee4;
   padding: 10px;
 }
 
 .footer {
   height: 75px;
-  background: #e780b3;
+  background: #233e40;
   padding-top: 55px;
-  color: #26400c;
+  color: #e4dbce;
 }
 
 .content {
@@ -367,28 +372,28 @@ ul, ol {
 }
 
 .swatch-1 {
-  background-color: #e780b3;
-  color: #26400c;
+  background-color: #233e40;
+  color: #e4dbce;
 }
 
 .swatch-2 {
-  background-color: #efabcd;
-  color: #26400c;
+  background-color: #152426;
+  color: #e4dbce;
 }
 
 .swatch-3 {
-  background-color: #cdefab;
-  color: #26400c;
+  background-color: #403423;
+  color: #e4dbce;
 }
 
 .swatch-4 {
-  background-color: #abcdef;
-  color: #26400c;
+  background-color: #161526;
+  color: #e4dbce;
 }
 
 .swatch-5 {
-  background-color: #80b3e7;
-  color: #26400c;
+  background-color: #262340;
+  color: #e4dbce;
 }
 
 .wrapper_grid {
@@ -402,7 +407,10 @@ ul, ol {
 }
 
 .grid-col {
-  background-color: #e780b3;
-  color: #26400c;
+  background-color: #233e40;
+  color: #e4dbce;
   height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  border: 2px solid #161526;
 }

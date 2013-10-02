@@ -187,3 +187,42 @@ Color Functions
 
     @return hsl($hue, percentage_limits($saturation, true), percentage_limits($lightness, true));
 }
+
+/*
+ * Split-Complimentary Color function
+ * Returns Split-Complimentary palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+@function split_complimentary_color($color: $base_color, $swatch: 3, $brighten: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $shade_modifier: 8;
+    $color_wheel_degree: 150;
+
+    @if($swatch == 1) {
+        $hue: $hue + $color_wheel_degree;
+    } @else if ($swatch == 2) {
+        $hue: $hue + $color_wheel_degree;
+        @if($brighten == false) {
+            $lightness: $lightness - $shade_modifier;
+        } @else {
+            $lightness: $lightness + $shade_modifier;
+        }
+    } @else if($swatch == 4) {
+        $hue: $hue - $color_wheel_degree;
+        @if($brighten == false) {
+            $lightness: $lightness - $shade_modifier;
+        } @else {
+            $lightness: $lightness + $shade_modifier;
+        }
+    } @else if($swatch == 5) {
+        $hue: $hue - $color_wheel_degree;
+    }
+
+    @return hsl(color_wheel($hue), $saturation, percentage_limits($lightness, false));
+}

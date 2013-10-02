@@ -142,4 +142,7 @@ ul, ol {
     background-color: $swatch-1;
     color: font_color_adjust($swatch-1, $swatch-3, $tint_adjustment_percentage);
     height: 40px;
+    text-align: center;
+    padding-top: 10px;
+    border: 2px solid $swatch-4;
 }

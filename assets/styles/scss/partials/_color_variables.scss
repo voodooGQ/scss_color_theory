@@ -40,5 +40,10 @@ $swatch-5: $base_color;
     $swatch-2: shade_color($base_color, 2, $brighten);
     $swatch-4: shade_color($base_color, 4, $brighten);
     $swatch-5: shade_color($base_color, 5, $brighten);
-}
 
+} @else if $palette_style == 'split-complimentary' {
+    $swatch-1: split_complimentary_color($base_color, 1, $brighten);
+    $swatch-2: split_complimentary_color($base_color, 2, $brighten);
+    $swatch-4: split_complimentary_color($base_color, 4, $brighten);
+    $swatch-5: split_complimentary_color($base_color, 5, $brighten);
+}
