@@ -1,0 +1,13 @@
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: Medium Breakpoint
+------------------------------------------------------------------------ */
+
+@if($responsive == true) {
+    @media all and (min-width: ($breakpoint_small + 1)) {
+
+    }
+}

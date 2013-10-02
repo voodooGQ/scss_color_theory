@@ -47,6 +47,31 @@ $grid_width: 0;
 
 }
 
+@if($responsive == true) {
+    // Breakpoint shifts for grid $medium
+    @if($grid_break_at_medium == true) {
+        @media all and (max-width: ($breakpoint_medium)) {
+            .grid-col {
+                width: 50%;
+            }
+
+            .grid-col + .grid-col {
+                margin-left: 0;
+            }
+        }
+    }
+    // Breakpoint shifts for grid $small
+    @media all and (max-width: $breakpoint_small) {
+      .grid-col {
+        width: 100%;
+      }
+
+      .grid-col + .grid-col {
+        margin-left: 0;
+      }
+    }
+}
+
 /**
  * Grid Wrapper mixin to set max-width and regular width
  */

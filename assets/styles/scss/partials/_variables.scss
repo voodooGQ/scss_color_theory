@@ -19,15 +19,17 @@ $tint_adjustment_percentage: 15;
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades, split-complimentary, square {TODO: tetradic}
+ * Options: monochromatic, complimentary, analogous, triad, shades, split-complimentary, square
  */
+
+// $palette_style: 'monochromatic'
 // $palette_style: 'complimentary';
 // $palette_style: 'analogous';
 // $palette_style: 'triad';
-// $palette_style: 'shades';
+$palette_style: 'shades';
 // $palette_style: 'split-complimentary';
 // $palette_style: 'square';
-$palette_style: 'tetradic';
+// $palette_style: 'tetradic';
 
 $site_width: 1024;
 
@@ -38,6 +40,9 @@ $grid: true;
 $responsive: true;
 $columns: 12;
 $gutter: 10;
+$breakpoint_medium: 1024px;
+$breakpoint_small: 480px;
+$grid_break_at_medium: true;
 
 /**
  * Other Site Variables

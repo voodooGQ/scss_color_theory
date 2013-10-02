@@ -106,7 +106,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades, split-complimentary, square {TODO: tetradic}
+ * Options: monochromatic, complimentary, analogous, triad, shades, split-complimentary, square
  */
 /**
  * Grid System Variables
@@ -175,6 +175,15 @@ Color Functions
  * @return {string}
  */
 /*
+ * Monochromatic function
+ * Returns various shades of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+/*
  * Split-Complimentary Color function
  * Returns Split-Complimentary palette of the base supplied color
  *
@@ -214,7 +223,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades, split-complimentary, square {TODO: tetradic}
+ * Options: monochromatic, complimentary, analogous, triad, shades, split-complimentary, square
  */
 /**
  * Grid System Variables
@@ -292,6 +301,24 @@ Grid system calculator. Will define in px or % based on if responsive is chosen
   width: 100%;
 }
 
+@media all and (max-width: 1024px) {
+  .grid-col {
+    width: 50%;
+  }
+
+  .grid-col + .grid-col {
+    margin-left: 0;
+  }
+}
+@media all and (max-width: 480px) {
+  .grid-col {
+    width: 100%;
+  }
+
+  .grid-col + .grid-col {
+    margin-left: 0;
+  }
+}
 /**
  * Grid Wrapper mixin to set max-width and regular width
  */
@@ -337,36 +364,36 @@ ul, ol {
 }
 
 .wrapper {
-  background-color: #10a6f0;
-  color: #434805;
-  border: 2px solid #9ca90b;
+  background-color: #676e18;
+  color: #f5fab7;
+  border: 2px solid #eceddf;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em;
 }
 .wrapper a {
   text-decoration: none;
-  color: #140990;
+  color: #ccd194;
 }
 .wrapper a:hover {
-  color: #4e3ff3;
+  color: #888f3d;
 }
 .wrapper code {
   font-family: "Droid Sans Mono" sans-serif;
 }
 
 .header {
-  background-color: #2210f0;
-  border-bottom: 2px solid #9ca90b;
-  color: #0a0548;
+  background-color: #070803;
+  border-bottom: 2px solid #eceddf;
+  color: #e6e8c9;
   padding: 10px;
 }
 
 .footer {
   height: 75px;
-  background: #36f010;
+  background: #a0ac17;
   padding-top: 55px;
-  color: #434805;
+  color: #f5fab7;
 }
 
 .content {
@@ -390,13 +417,13 @@ ul, ol {
 }
 
 .swatch-1 {
-  background-color: #36f010;
-  color: #434805;
+  background-color: #a0ac17;
+  color: #f5fab7;
 }
 
 .swatch-2 {
-  background-color: #10a6f0;
-  color: #434805;
+  background-color: #676e18;
+  color: #f5fab7;
 }
 
 .swatch-3 {
@@ -405,13 +432,13 @@ ul, ol {
 }
 
 .swatch-4 {
-  background-color: #2210f0;
-  color: #434805;
+  background-color: #070803;
+  color: #f5fab7;
 }
 
 .swatch-5 {
-  background-color: #9ca90b;
-  color: #f5fab7;
+  background-color: #eceddf;
+  color: #434805;
 }
 
 .wrapper_grid {
@@ -425,10 +452,37 @@ ul, ol {
 }
 
 .grid-col {
-  background-color: #36f010;
-  color: #434805;
+  background-color: #a0ac17;
+  color: #f5fab7;
   height: 40px;
   text-align: center;
   padding-top: 10px;
-  border: 2px solid #2210f0;
+  border: 2px solid #070803;
 }
+
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Responsive Breakpoint sheets
+------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: Large Breakpoint
+------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: Medium Breakpoint
+------------------------------------------------------------------------ */
+/* ---------------------------------------------------------------------
+Original Author: Shane Smith
+
+Target Browsers: All
+Media Type: Screen, Projection
+Width: Small Breakpoint
+------------------------------------------------------------------------ */

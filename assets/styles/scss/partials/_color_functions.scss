@@ -189,6 +189,38 @@ Color Functions
 }
 
 /*
+ * Monochromatic function
+ * Returns various shades of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+@function monochromatic_color($color: $base_color, $swatch: 3) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $shade_modifier: 5;
+
+    @if($swatch == 1) {
+        $saturation: $saturation - ($shade_modifier * 2);
+        $lightness: $lightness - $shade_modifier;
+    } @else if ($swatch == 2) {
+        $saturation: $saturation - $shade_modifer;
+        $lightness: $lightness - ($shade_modifier * 2);
+    } @else if ($swatch == 4) {
+        $saturation: $saturation + $shade_modifier;
+        $saturation: $saturation + ($shade_modifier * 2);
+    } @else if ($swatch == 5) {
+        $saturation: $saturation + ($shade_modifier * 2);
+        $lightness: $lightness + $shade_modifier;
+    }
+
+    @return hsl($hue, percentage_limits($saturation, false), percentage_limits($lightness, false));
+}
+
+/*
  * Split-Complimentary Color function
  * Returns Split-Complimentary palette of the base supplied color
  *
