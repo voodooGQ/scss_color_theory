@@ -106,7 +106,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades, split-complimentary {TODO: tetradic, square}
+ * Options: complimentary, analogous, triad, shades, split-complimentary, square {TODO: tetradic}
  */
 /**
  * Grid System Variables
@@ -183,6 +183,24 @@ Color Functions
  * @param {boolean} $brighten Whether we should brighten the color palette
  * @return {string}
  */
+/*
+ * Square Color function
+ * Returns Square palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+/*
+ * Tetradic Color function
+ * Returns Tetradic palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
 /* ---------------------------------------------------------------------
 Original Author: Shane Smith
 
@@ -196,7 +214,7 @@ Site Variables
 /*
  * Palette Style
  *
- * Options: complimentary, analogous, triad, shades, split-complimentary {TODO: tetradic, square}
+ * Options: complimentary, analogous, triad, shades, split-complimentary, square {TODO: tetradic}
  */
 /**
  * Grid System Variables
@@ -278,7 +296,7 @@ Grid system calculator. Will define in px or % based on if responsive is chosen
  * Grid Wrapper mixin to set max-width and regular width
  */
 body {
-  background-color: #403423;
+  background-color: #def010;
   font-family: "Carme", Helvetica, Verdana, arials, sans-serif;
   font-size: 62.5%;
   line-height: 2em;
@@ -319,36 +337,36 @@ ul, ol {
 }
 
 .wrapper {
-  background-color: #152426;
-  color: #e4dbce;
-  border: 2px solid #262340;
+  background-color: #10a6f0;
+  color: #434805;
+  border: 2px solid #9ca90b;
   width: 1024px;
   margin: 0 auto;
   font-size: 1.25em;
 }
 .wrapper a {
   text-decoration: none;
-  color: #a09cc9;
+  color: #140990;
 }
 .wrapper a:hover {
-  color: #4d4884;
+  color: #4e3ff3;
 }
 .wrapper code {
   font-family: "Droid Sans Mono" sans-serif;
 }
 
 .header {
-  background-color: #161526;
-  border-bottom: 2px solid #262340;
-  color: #cfcee4;
+  background-color: #2210f0;
+  border-bottom: 2px solid #9ca90b;
+  color: #0a0548;
   padding: 10px;
 }
 
 .footer {
   height: 75px;
-  background: #233e40;
+  background: #36f010;
   padding-top: 55px;
-  color: #e4dbce;
+  color: #434805;
 }
 
 .content {
@@ -372,28 +390,28 @@ ul, ol {
 }
 
 .swatch-1 {
-  background-color: #233e40;
-  color: #e4dbce;
+  background-color: #36f010;
+  color: #434805;
 }
 
 .swatch-2 {
-  background-color: #152426;
-  color: #e4dbce;
+  background-color: #10a6f0;
+  color: #434805;
 }
 
 .swatch-3 {
-  background-color: #403423;
-  color: #e4dbce;
+  background-color: #def010;
+  color: #434805;
 }
 
 .swatch-4 {
-  background-color: #161526;
-  color: #e4dbce;
+  background-color: #2210f0;
+  color: #434805;
 }
 
 .swatch-5 {
-  background-color: #262340;
-  color: #e4dbce;
+  background-color: #9ca90b;
+  color: #f5fab7;
 }
 
 .wrapper_grid {
@@ -407,10 +425,10 @@ ul, ol {
 }
 
 .grid-col {
-  background-color: #233e40;
-  color: #e4dbce;
+  background-color: #36f010;
+  color: #434805;
   height: 40px;
   text-align: center;
   padding-top: 10px;
-  border: 2px solid #161526;
+  border: 2px solid #2210f0;
 }

@@ -46,4 +46,17 @@ $swatch-5: $base_color;
     $swatch-2: split_complimentary_color($base_color, 2, $brighten);
     $swatch-4: split_complimentary_color($base_color, 4, $brighten);
     $swatch-5: split_complimentary_color($base_color, 5, $brighten);
+
+} @else if $palette_style == 'square' {
+    $swatch-1: square_color($base_color, 1, $brighten);
+    $swatch-2: square_color($base_color, 2, $brighten);
+    $swatch-4: square_color($base_color, 4, $brighten);
+    $swatch-5: square_color($base_color, 5, $brighten);
+
+} @else if $palette_style == 'tetradic' {
+    $swatch-1: tetradic_color($base_color, 1, $brighten);
+    $swatch-2: tetradic_color($base_color, 2, $brighten);
+    $swatch-4: tetradic_color($base_color, 4, $brighten);
+    $swatch-5: tetradic_color($base_color, 5, $brighten);
+
 }

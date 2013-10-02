@@ -226,3 +226,69 @@ Color Functions
 
     @return hsl(color_wheel($hue), $saturation, percentage_limits($lightness, false));
 }
+
+/*
+ * Square Color function
+ * Returns Square palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+@function square_color($color: $base_color, $swatch: 3, $brighten: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $shade_modifier: 15;
+    $color_wheel_degree: 90;
+
+    @if($swatch == 1) {
+        $hue: $hue + $color_wheel_degree;
+    } @else if ($swatch == 2) {
+        $hue: $hue + ($color_wheel_degree * 2);
+    } @else if ($swatch == 4) {
+        $hue: $hue + ($color_wheel_degree * 3);
+    } @else if ($swatch == 5) {
+        @if($brighten == false) {
+            $lightness: $lightness - $shade_modifier;
+        } @else {
+            $lightness: $lightness + $shade_modifier;
+        }
+    }
+
+    @return hsl(color_wheel($hue), $saturation, percentage_limits($lightness, true));
+}
+
+/*
+ * Tetradic Color function
+ * Returns Tetradic palette of the base supplied color
+ *
+ * @param {string} $color The base color
+ * @param {int} $swatch The swatch color modifier (default 3)
+ * @param {boolean} $brighten Whether we should brighten the color palette
+ * @return {string}
+ */
+@function tetradic_color($color: $base_color, $swatch: 3, $brighten: false) {
+    $hue: hue($color);
+    $saturation: saturation($color);
+    $lightness: lightness($color);
+    $shade_modifier: 15;
+    $color_wheel_degree: 45;
+
+    @if($swatch == 1) {
+        $hue: $hue + $color_wheel_degree;
+    } @else if ($swatch == 2) {
+        $hue: $hue + ($color_wheel_degree * 3);
+    } @else if ($swatch == 4) {
+        $hue: $hue + ($color_wheel_degree * 4);
+    } @else if ($swatch == 5) {
+        @if($brighten == false) {
+            $lightness: $lightness - $shade_modifier;
+        } @else {
+            $lightness: $lightness + $shade_modifier;
+        }
+    }
+
+    @return hsl(color_wheel($hue), $saturation, percentage_limits($lightness, true));
+}
